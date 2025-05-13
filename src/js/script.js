@@ -1,9 +1,10 @@
 //DECLARANDO O ARRAY DE IMAGENS
 
 let imagens =[
-    'src/assets/universo.jpg',
-    'src/assets/praia.jpg',
-    'src/assets/montanhas.jpg',
+    'src/assets/imagem1.jpg',
+    'src/assets/imagem2.jpeg',
+    'src/assets/imagem3.jpeg',
+    'src/assets/imagem4.jpeg',
 ];
 
 //DECLARANDO AS VARIAVEIS
