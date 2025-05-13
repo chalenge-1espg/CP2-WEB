@@ -151,6 +151,22 @@ footer {
   .slideshow {
     height: 50vh;
   }
+  #container-quiz {
+    padding: 20px;
+  }
+
+  #container-quiz .quiz h1 {
+    font-size: 1.8rem;
+  }
+
+  #container-perguntas h2 {
+    font-size: 1.2rem;
+  }
+
+  #proximo, #inicio-btn {
+    width: 100%;
+    padding: 12px;
+  }
 }
 /* Carros Section */
 .carros-section {
@@ -307,4 +323,105 @@ footer {
 .orcamento-btn:hover {
   background-color: #00cfa4;
   transform: scale(1.05);
+}
+/* Container principal do quiz */
+#container-quiz {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 255, 191, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 255, 191, 0.15);
+  animation: slideIn 1.5s ease;
+}
+
+/* Título principal do quiz */
+#container-quiz .quiz h1 {
+  text-align: center;
+  color: #00ffc3;
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffc3;
+}
+
+/* Pergunta */
+#container-perguntas h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 6px #00ffc3;
+}
+
+/* Campo de resposta */
+#resposta {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+  background-color: #101820;
+  color: #fff;
+  border: 1px solid #00ffc3;
+  box-shadow: 0 0 8px rgba(0, 255, 191, 0.2);
+}
+
+/* Botão Próxima Pergunta */
+#proximo, #inicio-btn {
+  background-color: #00ffc3;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  display: block;
+  margin: 20px auto 10px;
+}
+
+#proximo:hover, #inicio-btn:hover {
+  background-color: #00cfa4;
+  transform: scale(1.05);
+}
+
+/* Mensagem de feedback */
+#message {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ffcc00;
+  font-style: italic;
+}
+
+/* Resultado */
+#container-resultado {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #101820;
+  border-left: 4px solid #00ffc3;
+  border-radius: 8px;
+  display: none;
+}
+
+#container-resultado h2 {
+  color: #00ffc3;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+#lista-resultado {
+  list-style: decimal;
+  padding-left: 20px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* Classe para esconder o resultado */
+.hidden {
+  display: none;
 }
