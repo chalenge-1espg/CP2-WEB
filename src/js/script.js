@@ -1,26 +1,16 @@
-//DECLARANDO O ARRAY DE IMAGENS
-
-let imagens =[
-    'src/assets/imagem1.jpg',
-    'src/assets/imagem2.jpeg',
-    'src/assets/imagem3.jpeg',
-    'src/assets/imagem4.jpeg',
+const imagens = [
+  "src/assets/imagem1.jpg",
+  "src/assets/imagem2.jpeg",
+  "src/assets/imagem3.jpeg",
+  "src/assets/imagem4.jpeg"
 ];
 
-//DECLARANDO AS VARIAVEIS
+let index = 0;
+const slide = document.getElementById("slide-img");
 
-let index=0;
-let tempo=3000;
-
-//CRIANDO A FUNÇÃO SLIDESHOW
-
-function slideShow(){
-    document.getElementById("image").src=imagens[index];
-    index++;
-
-    if(index == imagens.length){
-        index=0;
-    }
-    setTimeout("slideShow()",tempo)
+function trocarImagem() {
+  index = (index + 1) % imagens.length;
+  slide.src = imagens[index];
 }
-slideShow();
+
+setInterval(trocarImagem, 3000); // Troca a cada 3 segundos
