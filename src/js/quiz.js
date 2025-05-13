@@ -12,10 +12,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
     
     //DECLARANDO ARRAY DE PERGUNTAS
     const questoes =[
-        "Qual Linguagem de Programação você utiliza",
-        "Descreva essa Linguagem",
-        "Em que ano surgiu a Linguagem Utilizada",
-        "Você se considera um programador sênior ?",
+        "O que te levou a considerar a compra de um carro elétrico?",
+        "O custo com combustível foi um fator importante na sua decisão?",
+        "Você pensou em questões ambientais ao escolher um carro elétrico?",
+        "Quais benefícios financeiros você encontrou ao optar por um carro elétrico (isenções de impostos, menor manutenção, etc.)?",
+        "Você teve alguma influência de amigos, familiares ou mídia para comprar um carro elétrico?",
+        "O que você mais gosta na experiência de dirigir um carro elétrico?",
+        "Você acha que os carros elétricos são mais confortáveis ou silenciosos que os carros a combustão?",
+        "A aceleração e desempenho do carro elétrico te agradam?",
+        "Você se sente bem por contribuir com a redução da poluição ao usar um carro elétrico?",
+        "Você recomendaria um carro elétrico para outras pessoas? Por quê?",
+
     ];
     
     //DECLARANDO AS VARIAVEIS
