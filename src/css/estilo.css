@@ -230,3 +230,81 @@ footer {
   background-color: #00cfa4;
   transform: scale(1.05);
 }
+/* Carros Section */
+.carros-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 30px;
+}
+
+.carros-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #00ffc3;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px #00ffc3;
+}
+
+/* Cards Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card Individual */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 255, 191, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 255, 191, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 255, 191, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 4px #00ffc3;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Botão de orçamento */
+.orcamento-btn {
+  display: inline-block;
+  background-color: #00ffc3;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.orcamento-btn:hover {
+  background-color: #00cfa4;
+  transform: scale(1.05);
+}
