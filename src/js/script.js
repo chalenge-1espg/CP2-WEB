@@ -1,8 +1,25 @@
-//DECLARANDO O ARRAY DE IMAGEM
+//DECLARANDO O ARRAY DE IMAGENS
 
-let imagens = [
-    'src/assets/imagem1.jpg',
-    'src/assets/imagem2.jpg',
-    'src/assets/imagem3.jpg',
-    'src/assets/imagem4.jpg',
+let imagens =[
+    'src/assets/universo.jpg',
+    'src/assets/praia.jpg',
+    'src/assets/montanhas.jpg',
 ];
+
+//DECLARANDO AS VARIAVEIS
+
+let index=0;
+let tempo=3000;
+
+//CRIANDO A FUNÇÃO SLIDESHOW
+
+function slideShow(){
+    document.getElementById("image").src=imagens[index];
+    index++;
+
+    if(index == imagens.length){
+        index=0;
+    }
+    setTimeout("slideShow()",tempo)
+}
+slideShow();
