@@ -1,5 +1,9 @@
 //EVENTO CARREGA A PAGINA AUTOMATICAMENTE
 document.addEventListener('DOMContentLoaded', ()=>{
+
+    // ALERTA DE BOAS-VINDAS
+    alert("Bem-vindo! Responda às perguntas sobre carros elétricos e veja seu resultado ao final.");
+
     //DECLARANDO AS VARIAVEIS
     const pergunta = document.getElementById('pergunta');
     const resposta = document.getElementById('resposta');
@@ -22,62 +26,57 @@ document.addEventListener('DOMContentLoaded', ()=>{
         "A aceleração e desempenho do carro elétrico te agradam?",
         "Você se sente bem por contribuir com a redução da poluição ao usar um carro elétrico?",
         "Você recomendaria um carro elétrico para outras pessoas? Por quê?",
-
     ];
     
     //DECLARANDO AS VARIAVEIS
-    let perguntas =0;
+    let perguntas = 0;
     const respostas = [];
     
     //CRIANDO A FUNÇÃO MOSTRAR PERGUNTA
-    
     function mostrarPergunta(){
-        if(perguntas <questoes.length){
-            pergunta.textContent=questoes[perguntas];
-            resposta.value='';
-            mensagem.textContent='';
-        }else{
+        if(perguntas < questoes.length){
+            pergunta.textContent = questoes[perguntas];
+            resposta.value = '';
+            mensagem.textContent = '';
+        } else {
             mostrarResultado();
         }
     }
     
     //CRIANDO A FUNÇÃO MOSTRAR RESULTADO
-    
     function mostrarResultado(){
         containerPerguntas.classList.add('hidden');
         containerResultado.classList.remove('hidden');
-        listaResultado.innerHTML='';
+        listaResultado.innerHTML = '';
     
-        questoes.forEach((questoes,i)=>{
-                const listaItem =document.createElement('li');
-                listaItem.innerHTML=`<strong>${questoes}</strong><br>
-                Sua Resposta: <span>${respostas[i]}</span>`
-                listaResultado.appendChild(listaItem);
-            })
+        questoes.forEach((questao, i) => {
+            const listaItem = document.createElement('li');
+            listaItem.innerHTML = `<strong>${questao}</strong><br> Sua Resposta: <span>${respostas[i]}</span>`;
+            listaResultado.appendChild(listaItem);
+        });
+    }
+    
+    //FUNÇÃO PARA PROXIMA PERGUNTA
+    function nextQuestao(){
+        const respostaAtual = resposta.value.trim();
+        if(respostaAtual === ''){
+            mensagem.textContent = "Por favor, digite sua resposta";
+            return;
         }
-    
-        //FUNÇÃO PARA PROXIMA PERGUNTA
-    
-        function nextQuestao(){
-            const respostaAtual = resposta.value.trim();
-            if(respostaAtual === ''){
-                mensagem.textContent="Por favor , digite sua resposta";
-                return;
-            }
-            respostas.push(respostaAtual);
-            perguntas++;
-            mostrarPergunta();
-        }
-    
-        function reiniciarQuiz(){
-            perguntas =0;
-            respostas.length =0;
-            containerResultado.classList.add('hidden');
-            containerPerguntas.classList.remove('hidden');
-            mostrarPergunta();
-        }
-        proximaPergunta.addEventListener('click',nextQuestao);
-        reiniciarBotao.addEventListener('click',reiniciarQuiz);
+        respostas.push(respostaAtual);
+        perguntas++;
         mostrarPergunta();
+    }
     
-    })
+    function reiniciarQuiz(){
+        perguntas = 0;
+        respostas.length = 0;
+        containerResultado.classList.add('hidden');
+        containerPerguntas.classList.remove('hidden');
+        mostrarPergunta();
+    }
+
+    proximaPergunta.addEventListener('click', nextQuestao);
+    reiniciarBotao.addEventListener('click', reiniciarQuiz);
+    mostrarPergunta();
+});
