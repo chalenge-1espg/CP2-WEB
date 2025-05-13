@@ -87,8 +87,8 @@ nav ul li a:hover::after {
 }
 
 .slideshow img {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 20px;
   animation: zoomFade 20s infinite;
