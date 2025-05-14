@@ -1,7 +1,7 @@
 const imagens = [
   "src/assets/imagem12.jpg",
-  "src/assets/imagem2.jpeg",
-  "src/assets/imagem3.jpeg",
+  "src/assets/imagem2.jpg",
+  "src/assets/imagem3.jpg",
   "src/assets/imagem1.jpg",
   "src/assets/imagem5.jpg",
   "src/assets/imagem6.jpg",
@@ -10,7 +10,7 @@ const imagens = [
   "src/assets/imagem11.jpg",
   "src/assets/imagem8.jpg",
   "src/assets/imagem9.jpg",
-  "src/assets/imagem4.jpeg",
+  "src/assets/imagem4.jpg",
 ];
 
 let index = 0;

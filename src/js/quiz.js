@@ -81,10 +81,33 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarPergunta();
     }
 
-    // EVENTOS
-    proximaPergunta.addEventListener('click', proximaQuestao);
-    reiniciarBotao.addEventListener('click', reiniciarQuiz);
 
     // INÍCIO DO QUIZ
     mostrarPergunta();
+    
+    //Resultad Quiz
+    function exibirResultados() {
+        // Gerar um número aleatório entre 1 e 12
+        const numeroAleatorio = Math.floor(Math.random() * 12) + 1;
+       
+        // Definir o caminho da imagem com base no número aleatório
+        const caminhoImagem = `../src/assets/imagem${numeroAleatorio}.jpg`;
+       
+        // Selecionar o elemento onde a imagem será exibida
+        const resultadoImagem = document.getElementById('resultado-imagem');
+       
+        // Criar um novo elemento de imagem
+        const img = document.createElement('img');
+        img.src = caminhoImagem;
+        img.alt = `Imagem ${numeroAleatorio}`;
+        // Limpar resultados anteriores antes de adicionar a nova imagem
+        resultadoImagem.innerHTML = '';
+        // Adicionar a nova imagem ao container
+        resultadoImagem.appendChild(img);
+      }
+
+          // EVENTOS
+    proximaPergunta.addEventListener('click', proximaQuestao);
+    reiniciarBotao.addEventListener('click', reiniciarQuiz);
+
 });
