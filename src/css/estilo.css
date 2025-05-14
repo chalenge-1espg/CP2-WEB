@@ -118,14 +118,14 @@ nav ul li a:hover::after {
   align-items: center;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 255, 191, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 255, 191, 0.3);
   animation: slideIn 1.5s ease-in-out;
 }
 
 .slideshow img {
   width: 90%;
   height: 90%;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 20px;
   animation: zoomFade 20s infinite;
 }
