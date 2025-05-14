@@ -399,3 +399,29 @@ main {
 .hidden {
   display: none;
 }     
+/* Seção Sobre */
+.sobre-nos {
+  padding: 40px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 255, 191, 0.15);
+  backdrop-filter: blur(10px);
+  margin: 30px auto;
+  max-width: 900px;
+  animation: slideIn 1.5s ease;
+}
+
+.sobre-nos h2 {
+  font-size: 2.5rem;
+  color: #00ffc3;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffc3;
+}
+
+.sobre-nos p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
