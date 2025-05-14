@@ -168,26 +168,34 @@ footer {
     padding: 12px;
   }
 }
-/* Carros Section */
-.carros-section {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 30px;
+/* Container principal */
+main {
+  padding: 60px 20px;
+  background-color: #101820;
 }
 
-.carros-section h2 {
+/* Cards Container */
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
   text-align: center;
+}
+
+.cards-container h2 {
   font-size: 2.5rem;
   color: #00ffc3;
   margin-bottom: 40px;
   text-shadow: 0 0 10px #00ffc3;
 }
 
-/* Cards Container */
-.card-container {
+/* Cards */
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta a quantidade de colunas */
   gap: 30px;
+  justify-content: center; /* Centraliza os cards */
+  align-items: stretch;
 }
 
 /* Card Individual */
@@ -199,6 +207,7 @@ footer {
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(0, 255, 191, 0.2);
+  width: 100%; /* Faz os cards ocuparem toda a largura disponível */
 }
 
 .card:hover {
@@ -206,12 +215,14 @@ footer {
   box-shadow: 0 8px 30px rgba(0, 255, 191, 0.25);
 }
 
+/* Imagens dos Cards */
 .card img {
-  width: 100%;
-  height: 180px;
+  width: 100%;  /* A imagem ocupa 100% da largura do card */
+  height: 180px;  /* Ajusta a altura da imagem para ficar compacta */
   object-fit: cover;
 }
 
+/* Conteúdo do Card */
 .card-content {
   padding: 20px;
 }
@@ -229,7 +240,7 @@ footer {
   margin-bottom: 15px;
 }
 
-/* Botão de orçamento */
+/* Botão de Orçamento */
 .orcamento-btn {
   display: inline-block;
   background-color: #00ffc3;
@@ -246,88 +257,8 @@ footer {
   background-color: #00cfa4;
   transform: scale(1.05);
 }
-/* Carros Section */
-.carros-section {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 30px;
-}
 
-.carros-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #00ffc3;
-  margin-bottom: 40px;
-  text-shadow: 0 0 10px #00ffc3;
-}
 
-/* Cards Container */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas, ajuste se necessário */
-  gap: 30px;
-  justify-items: center; /* Garante que os cards fiquem centralizados dentro da grid */
-  grid-auto-rows: minmax(200px, auto); /* Garante que a altura dos cards seja mínima, mas automática */
-  margin-top: 20px; /* Espaçamento acima dos cards */
-}
-
-/* Card Individual */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 30px rgba(0, 255, 191, 0.1);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(0, 255, 191, 0.2);
-  width: 100%; /* Garantir que os cards ocupem toda a largura disponível na grid */
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0, 255, 191, 0.25);
-}
-
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
-  font-size: 1.4rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-  text-shadow: 0 0 4px #00ffc3;
-}
-
-.card-content p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 15px;
-}
-
-/* Botão de orçamento */
-.orcamento-btn {
-  display: inline-block;
-  background-color: #00ffc3;
-  color: #000;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.orcamento-btn:hover {
-  background-color: #00cfa4;
-  transform: scale(1.05);
-}
 
 /* Container principal do quiz */
 #container-quiz {
