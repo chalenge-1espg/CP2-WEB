@@ -133,14 +133,73 @@ nav ul li a:hover::after {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   margin-top: 40px;
   background: #101820;
   font-size: 0.9rem;
   color: #aaa;
   border-top: 1px solid #00ffc3;
+  box-shadow: 0 4px 15px rgba(0, 255, 191, 0.2);
 }
 
+.footer-conteudo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-esquerda p {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-meio h4,
+.footer-direita h4 {
+  font-size: 1.2rem;
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+.redes-sociais a {
+  margin: 0 15px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociais a:hover {
+  transform: scale(1.1);
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociais img:hover {
+  transform: scale(1.1);
+}
+
+.logos-carros {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.logos-carros img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logos-carros img:hover {
+  transform: scale(1.1);
+}
 /* Animations */
 @keyframes slideIn {
   from {
@@ -205,13 +264,21 @@ footer {
     width: 100%;
     padding: 12px;
   }
-  .footer-content {
+  .footer-conteudo {
     flex-direction: column;
     align-items: center;
   }
 
-  .car-logos {
+  .footer-esquerda p {
+    font-size: 0.9rem;
+  }
+
+  .logos-carros {
     margin-top: 20px;
+  }
+
+  .redes-sociais a {
+    margin: 10px 5px;
   }
 }
 /* Container principal */
