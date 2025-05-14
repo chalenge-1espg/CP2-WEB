@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   overflow-x: hidden;
@@ -54,7 +54,7 @@ nav ul li a {
 }
 
 nav ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background: #00ffc3;
@@ -98,7 +98,6 @@ nav ul li a:hover::after {
   background-color: #00ffc3;
   border-radius: 5px;
   color: #000;
-
 }
 
 .dropdown:hover .dropdown-content {
@@ -108,7 +107,6 @@ nav ul li a:hover::after {
 .dropdown:hover .dropbtn {
   color: #00ffc3;
 }
-
 
 /* Slideshow Section */
 .slideshow {
@@ -156,7 +154,8 @@ footer {
 }
 
 @keyframes zoomFade {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -201,7 +200,8 @@ footer {
     font-size: 1.2rem;
   }
 
-  #proximo, #inicio-btn {
+  #proximo,
+  #inicio-btn {
     width: 100%;
     padding: 12px;
   }
@@ -230,7 +230,10 @@ main {
 /* Cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta a quantidade de colunas */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Ajusta a quantidade de colunas */
   gap: 30px;
   justify-content: center; /* Centraliza os cards */
   align-items: stretch;
@@ -255,8 +258,8 @@ main {
 
 /* Imagens dos Cards */
 .card img {
-  width: 100%;  /* A imagem ocupa 100% da largura do card */
-  height: 180px;  /* Ajusta a altura da imagem para ficar compacta */
+  width: 100%; /* A imagem ocupa 100% da largura do card */
+  height: 180px; /* Ajusta a altura da imagem para ficar compacta */
   object-fit: cover;
 }
 
@@ -295,8 +298,6 @@ main {
   background-color: #00cfa4;
   transform: scale(1.05);
 }
-
-
 
 /* Container principal do quiz */
 #container-quiz {
@@ -344,7 +345,8 @@ main {
 }
 
 /* Botão Próxima Pergunta */
-#proximo, #inicio-btn {
+#proximo,
+#inicio-btn {
   background-color: #00ffc3;
   color: #000;
   font-weight: bold;
@@ -358,7 +360,8 @@ main {
   margin: 20px auto 10px;
 }
 
-#proximo:hover, #inicio-btn:hover {
+#proximo:hover,
+#inicio-btn:hover {
   background-color: #00cfa4;
   transform: scale(1.05);
 }
@@ -398,7 +401,7 @@ main {
 /* Classe para esconder o resultado */
 .hidden {
   display: none;
-}     
+}
 /* Seção Sobre */
 .sobre-nos {
   padding: 40px;
