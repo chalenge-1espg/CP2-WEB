@@ -1,21 +1,22 @@
 //EVENTO CARREGA A PAGINA AUTOMATICAMENTE
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
 
     // ALERTA DE BOAS-VINDAS
     alert("Bem-vindo! Responda às perguntas sobre carros elétricos e veja seu resultado ao final.");
 
-    //DECLARANDO AS VARIAVEIS
+    // VARIÁVEIS DO DOM
     const pergunta = document.getElementById('pergunta');
     const resposta = document.getElementById('resposta');
-    const proximaPergunta =document.getElementById('proximo');
+    const proximaPergunta = document.getElementById('proximo');
     const mensagem = document.getElementById('message');
-    const containerPerguntas =document.getElementById('container-perguntas');
-    const containerResultado =document.getElementById('container-resultado');
+    const containerPerguntas = document.getElementById('container-perguntas');
+    const containerResultado = document.getElementById('container-resultado');
     const listaResultado = document.getElementById('lista-resultado');
     const reiniciarBotao = document.getElementById('inicio-btn');
-    
-    //DECLARANDO ARRAY DE PERGUNTAS
-    const questoes =[
+    const imagemCarro = document.getElementById('imagem-carro'); // imagem final do carro
+
+    // ARRAY DE PERGUNTAS
+    const questoes = [
         "O que te levou a considerar a compra de um carro elétrico?",
         "O custo com combustível foi um fator importante na sua decisão?",
         "Você pensou em questões ambientais ao escolher um carro elétrico?",
@@ -25,58 +26,65 @@ document.addEventListener('DOMContentLoaded', ()=>{
         "Você acha que os carros elétricos são mais confortáveis ou silenciosos que os carros a combustão?",
         "A aceleração e desempenho do carro elétrico te agradam?",
         "Você se sente bem por contribuir com a redução da poluição ao usar um carro elétrico?",
-        "Você recomendaria um carro elétrico para outras pessoas? Por quê?",
+        "Você recomendaria um carro elétrico para outras pessoas? Por quê?"
     ];
-    
-    //DECLARANDO AS VARIAVEIS
-    let perguntas = 0;
+
+    let indicePergunta = 0;
     const respostas = [];
-    
-    //CRIANDO A FUNÇÃO MOSTRAR PERGUNTA
-    function mostrarPergunta(){
-        if(perguntas < questoes.length){
-            pergunta.textContent = questoes[perguntas];
+
+    // FUNÇÃO MOSTRAR PERGUNTA ATUAL
+    function mostrarPergunta() {
+        if (indicePergunta < questoes.length) {
+            pergunta.textContent = questoes[indicePergunta];
             resposta.value = '';
             mensagem.textContent = '';
         } else {
             mostrarResultado();
         }
     }
-    
-    //CRIANDO A FUNÇÃO MOSTRAR RESULTADO
-    function mostrarResultado(){
+
+    // FUNÇÃO MOSTRAR RESULTADO FINAL + IMAGEM DO CARRO
+    function mostrarResultado() {
         containerPerguntas.classList.add('hidden');
         containerResultado.classList.remove('hidden');
+        imagemCarro.classList.remove('hidden');
+
         listaResultado.innerHTML = '';
-    
+
         questoes.forEach((questao, i) => {
             const listaItem = document.createElement('li');
             listaItem.innerHTML = `<strong>${questao}</strong><br> Sua Resposta: <span>${respostas[i]}</span>`;
             listaResultado.appendChild(listaItem);
         });
     }
-    
-    //FUNÇÃO PARA PROXIMA PERGUNTA
-    function nextQuestao(){
+
+    // AVANÇAR PARA A PRÓXIMA QUESTÃO
+    function proximaQuestao() {
         const respostaAtual = resposta.value.trim();
-        if(respostaAtual === ''){
-            mensagem.textContent = "Por favor, digite sua resposta";
+        if (respostaAtual === '') {
+            mensagem.textContent = "Por favor, digite sua resposta.";
             return;
         }
+
         respostas.push(respostaAtual);
-        perguntas++;
+        indicePergunta++;
         mostrarPergunta();
     }
-    
-    function reiniciarQuiz(){
-        perguntas = 0;
+
+    // REINICIAR O QUIZ
+    function reiniciarQuiz() {
+        indicePergunta = 0;
         respostas.length = 0;
         containerResultado.classList.add('hidden');
+        imagemCarro.classList.add('hidden');
         containerPerguntas.classList.remove('hidden');
         mostrarPergunta();
     }
 
-    proximaPergunta.addEventListener('click', nextQuestao);
+    // EVENTOS
+    proximaPergunta.addEventListener('click', proximaQuestao);
     reiniciarBotao.addEventListener('click', reiniciarQuiz);
+
+    // INÍCIO DO QUIZ
     mostrarPergunta();
 });
