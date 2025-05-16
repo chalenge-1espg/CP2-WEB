@@ -12,7 +12,64 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
-
+/* ====== TELA DE ENTRADA ====== */
+#entradaTela {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Fundo escurecido com mais opacidade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  animation: fadeInOut 4s forwards;
+  /* A tela de entrada será animada para desaparecer */
+}
+ 
+.entrada-texto h1 {
+  font-family: 'Oswald', sans-serif;
+  color: transparent;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #006747, #ffffff, #e4002b);
+  /* Gradiente com as cores da bandeira mexicana */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+ 
+.entrada-texto p {
+  font-family: 'Exile', cursive;
+  color: #fff;
+  font-size: 1.5rem;
+}
+ 
+/* Animação de fade-in e fade-out */
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+ 
+  50% {
+    opacity: 1;
+  }
+ 
+  100% {
+    opacity: 0;
+  }
+}
+ 
+/* Remover a tela de entrada após a animação */
+#entradaTela.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  /* Desativa os eventos de mouse enquanto a tela de entrada está invisível */
+  z-index: -1;
+  /* Move a tela para trás, permitindo que a página seja clicada */
+}
 /* Header */
 header {
   background: rgba(0, 0, 0, 0.6);
