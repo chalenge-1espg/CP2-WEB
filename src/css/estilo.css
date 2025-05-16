@@ -19,7 +19,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background: linear-gradient(to bottom, #203a43, #2c5364);
   /* Fundo escurecido com mais opacidade */
   display: flex;
   justify-content: center;
@@ -32,10 +32,11 @@ body {
  
 .entrada-texto h1 {
   font-family: 'Oswald', sans-serif;
-  color: transparent;
+  color: #00ffc3;
   font-size: 3rem;
   margin-bottom: 15px;
   background: linear-gradient(to right, #00ffc3);
+  text-shadow: 8px 8px 11px #00ffc3;
   /* Gradiente com as cores da bandeira mexicana */
   -webkit-background-clip: text;
   background-clip: text;
