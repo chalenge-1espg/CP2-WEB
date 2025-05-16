@@ -22,3 +22,10 @@ function trocarImagem() {
 }
 
 setInterval(trocarImagem, 2000); // Troca a cada 3 segundos
+
+// Adiciona a classe fade-out ao elemento de tela de entrada
+window.onload = function () {
+  setTimeout(function () {
+    document.getElementById("entradaTela").classList.add("fade-out");
+  }, 4000); // Aguarda 4 segundos antes de remover a tela de entrada
+};
