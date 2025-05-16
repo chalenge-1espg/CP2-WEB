@@ -35,7 +35,7 @@ body {
   color: transparent;
   font-size: 3rem;
   margin-bottom: 15px;
-  background: linear-gradient(to right, #006747, #ffffff, #e4002b);
+  background: linear-gradient(to right, #00ffc3);
   /* Gradiente com as cores da bandeira mexicana */
   -webkit-background-clip: text;
   background-clip: text;
